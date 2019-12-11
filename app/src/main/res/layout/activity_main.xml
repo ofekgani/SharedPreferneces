@@ -37,51 +37,37 @@
         android:inputType="textPersonName"
         android:textStyle="bold"
         android:textSize="24dp"
-        android:text="Input Somthing:" />
+        android:hint="Name:" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"/>
 
-    <EditText
-        android:id="@+id/ed_number"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="15"
-        android:ems="10"
-        android:textStyle="bold"
-        android:textSize="24dp"
-        android:text="Count:"
-        android:inputType="numberDecimal" />
+        android:orientation="horizontal"
+        android:layout_weight="10">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5"/>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+                android:text="Count: "
+            android:textSize="32dp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="240dp"
-        android:layout_height="0dp"
-        android:layout_weight="10"
-        android:textStyle="bold"
-        android:textSize="24dp"
-        android:text="Count" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5"/>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="240dp"
-        android:layout_height="0dp"
-        android:layout_weight="10"
-        android:textStyle="bold"
-        android:textSize="24dp"
-        android:text="Reset" />
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textStyle="bold"
+            android:textSize="32dp"
+            android:text="0" />
+    </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
@@ -89,13 +75,44 @@
         android:layout_weight="5"/>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_count"
         android:layout_width="240dp"
         android:layout_height="0dp"
         android:layout_weight="10"
         android:textStyle="bold"
         android:textSize="24dp"
-        android:text="Exit" />
+        android:text="Count"
+        android:onClick="oc_count"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:text="Reset"
+        android:onClick="oc_reset"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:text="Exit"
+        android:onClick="oc_exit"/>
 
     <Space
         android:layout_width="match_parent"
