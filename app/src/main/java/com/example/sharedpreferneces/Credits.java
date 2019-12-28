@@ -7,6 +7,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class Credits extends AppCompatActivity {
+    /**
+     * @author ofek gani
+     * @version 0.1
+     * @since 25.11
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

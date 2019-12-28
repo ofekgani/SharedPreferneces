@@ -13,6 +13,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    /**
+     * @author ofek gani
+     * @version 0.1
+     * @since 25.11
+     */
 
     TextView tv_count;
     Button btn_count, btn_reset, btn_exit;
@@ -39,17 +44,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     *
+     * @param view get onClick
+     */
     public void oc_count(View view) {
         count++;
         tv_count.setText(""+count);
     }
 
+    /**
+     *
+     * @param view get onClick
+     */
     public void oc_reset(View view) {
         count = 0;
         tv_count.setText(""+count);
         ed_text.setText(" ");
     }
 
+    /**
+     *
+     * @param view get onClick
+     */
     public void oc_exit(View view) {
         name = ed_text.getText().toString();
         SharedPreferences settings = getSharedPreferences("save", MODE_PRIVATE);
@@ -60,12 +77,22 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    /**
+     *
+     * @param menu Create Toggle Menu
+     * @return menu to be displayed or Enable
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
+    /**
+     *
+     * @param item get item from the menu
+     * @return item pressed
+     */
     public boolean onOptionsItemSelected(MenuItem item){
         String st = item.getTitle().toString();
         if(st.equals("Home")){
